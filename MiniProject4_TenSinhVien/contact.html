@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore | Liên Hệ</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/libs/aos.css" />
+</head>
+<body>
+    <nav class="navbar sticky">
+        <div class="logo">TECH<span>STORE</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="features.html">Tính năng</a></li>
+            <li><a href="pricing.html">Bảng giá</a></li>
+            <li><a href="contact.html" class="active">Liên hệ</a></li>
+            <li><button id="mode-toggle">🌙</button></li>
+        </ul>
+    </nav>
+
+    <section class="content-section" style="margin-top: 120px;">
+        <div class="container" style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <h2 class="section-title" data-aos="fade-right">Gửi Yêu Cầu Cho Chúng Tôi</h2>
+            
+            <form id="order-form" class="contact-form" data-aos="fade-up">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Họ và tên</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email liên hệ</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" rows="5" required></textarea>
+                    <label for="message">Nội dung tin nhắn</label>
+                </div>
+
+                <button type="submit" class="btn-main" style="width: 100%;">
+                    <span class="btn-text">GỬI YÊU CẦU</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <div id="toast" class="toast">Đã gửi tin nhắn thành công!</div>
+
+    <script src="assets/libs/aos.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
