@@ -1,0 +1,164 @@
+/* Import Font từ Google Fonts để tránh lỗi phông */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary: #00d2ff;
+    --secondary: #3a7bd5;
+    --bg: #0a0a0a;
+    --card: #161616;
+    --text: #ffffff;
+    --font-main: 'Poppins', sans-serif;
+    --font-title: 'Montserrat', sans-serif;
+}
+
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+    font-family: var(--font-main); /* Áp dụng đồng bộ font */
+}
+
+body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+h1, h2, h3, .logo { font-family: var(--font-title); }
+
+/* --- Các CSS bổ sung để đồng bộ layout --- */
+.section-padding { padding: 100px 10%; }
+.text-center { text-align: center; }
+
+/* Hiệu ứng trượt cho tất cả các trang */
+[data-aos] { pointer-events: none; }
+.aos-animate { pointer-events: auto; }
+
+/* Tái sử dụng nút bấm cho các trang */
+.btn-tech {
+    padding: 12px 35px; background: linear-gradient(45deg, var(--secondary), var(--primary));
+    border: none; border-radius: 50px; color: #fff; font-weight: bold;
+    cursor: pointer; transition: 0.3s; text-transform: uppercase;
+}
+.btn-tech:hover { transform: scale(1.05); box-shadow: 0 0 20px var(--primary); }
+:root {
+    --primary: #00d2ff;
+    --secondary: #3a7bd5;
+    --bg-dark: #0a0a0a;
+    --card-bg: #161616;
+    --text: #ffffff;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* BÀI 1: HEADER STICKY & NAV */
+header {
+    position: sticky; top: 0; z-index: 1000;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.2rem 8%;
+}
+.logo { font-size: 1.6rem; font-weight: 800; color: var(--primary); letter-spacing: 2px; }
+.logo span { color: #fff; }
+
+.nav-links { display: flex; list-style: none; gap: 2.5rem; }
+.nav-links a {
+    color: #ccc; text-decoration: none; font-weight: 500;
+    transition: var(--transition); position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--primary); }
+.nav-links a.active::after {
+    content: ''; position: absolute; bottom: -5px; left: 0;
+    width: 100%; height: 2px; background: var(--primary);
+}
+
+/* MOBILE MENU */
+.menu-toggle { display: none; cursor: pointer; }
+.bar { display: block; width: 25px; height: 3px; margin: 5px; background: #fff; transition: 0.3s; }
+
+/* BÀI 2: ANIMATION @KEYFRAMES */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px var(--primary); }
+    50% { box-shadow: 0 0 20px var(--primary); }
+    100% { box-shadow: 0 0 5px var(--primary); }
+}
+
+/* HERO SECTION */
+.hero {
+    height: 85vh; display: flex; align-items: center; padding: 0 8%;
+    position: relative; overflow: hidden;
+}
+.hero-content { flex: 1; animation: fadeInUp 1s ease-out; }
+.hero-content h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; }
+.hero-image { flex: 1; display: flex; justify-content: center; }
+.hero-image img { width: 80%; animation: float 5s ease-in-out infinite; }
+
+/* BUTTON ADVANCED */
+.btn-tech {
+    padding: 12px 35px; background: linear-gradient(45deg, var(--secondary), var(--primary));
+    border: none; border-radius: 50px; color: #fff; font-weight: bold;
+    cursor: pointer; transition: var(--transition);
+}
+.btn-tech:hover { transform: scale(1.1); animation: glow 1.5s infinite; }
+
+/* BÀI 2: CARD 3D TILT */
+.card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem; padding: 4rem 8%;
+}
+.card {
+    background: var(--card-bg); padding: 2.5rem; border-radius: 20px;
+    transition: var(--transition); cursor: pointer; perspective: 1000px;
+}
+.card:hover {
+    transform: rotateX(10deg) rotateY(-10deg) translateY(-10px);
+    border: 1px solid var(--primary);
+}
+
+/* BÀI 4: FORM & FLOATING LABEL */
+.form-group { position: relative; margin-bottom: 2rem; }
+.form-input {
+    width: 100%; padding: 12px; background: none; border: none;
+    border-bottom: 2px solid #333; color: #fff; outline: none;
+}
+.form-label { position: absolute; left: 0; top: 12px; color: #666; transition: 0.3s; pointer-events: none; }
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+    top: -18px; font-size: 0.8rem; color: var(--primary);
+}
+
+/* TOAST & LOADING */
+.toast {
+    position: fixed; bottom: 20px; right: 20px; background: var(--primary);
+    color: #000; padding: 15px 30px; border-radius: 5px; font-weight: bold;
+    transform: translateX(150%); transition: 0.5s; z-index: 9999;
+}
+.toast.show { transform: translateX(0); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed; top: 70px; left: -100%; width: 100%; height: 100vh;
+        background: #000; flex-direction: column; align-items: center; padding-top: 50px;
+        transition: 0.5s;
+    }
+    .nav-links.active { left: 0; }
+    .menu-toggle { display: block; }
+    .hero { flex-direction: column; text-align: center; padding-top: 50px; }
+}
