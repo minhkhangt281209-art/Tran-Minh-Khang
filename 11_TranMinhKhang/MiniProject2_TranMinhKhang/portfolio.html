@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm | TMKhangShop</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="assets/libs/aos.css" rel="stylesheet">
+    <style>
+        .portfolio-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px;
+            padding: 20px 8% 50px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .badge-sale {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #d0021c;
+            color: #fff;
+            padding: 4px 10px;
+            font-weight: bold;
+            font-size: 12px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .badge-installment {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f1f1f1;
+            color: #333;
+            padding: 2px 8px;
+            font-size: 11px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .product-img-box {
+            width: 100%;
+            height: 200px;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .product-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 15px;
+            background: #fff;
+            flex-grow: 1;
+        }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 10px;
+            height: 40px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price {
+            color: #d0021c;
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .promo-footer {
+            background: linear-gradient(90deg, #d0021c 0%, #ff4d4d 100%);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .promo-footer .discount-text {
+            font-size: 11px;
+            text-transform: uppercase;
+            display: block;
+        }
+
+        .promo-footer .discount-val {
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        @media (max-width: 1024px) {
+            .portfolio-container { grid-template-columns: repeat(3, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .portfolio-container { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body style="background: #f4f4f4;"> <header>
+        <nav>
+            <div class="logo">TMKhang<span>Shop</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section style="padding: 60px 8% 20px; text-align: center;">
+            <h1 data-aos="fade-down" style="color: #333;">ƯU ĐÃI KHỦNG - <span style="color: #d0021c;">GIẢM ĐẾN 50%</span></h1>
+            <p style="color: #666;">Thương mời quý khách lựa chọn các sản phẩm công nghệ đỉnh cao.</p>
+        </section>
+
+        <div class="portfolio-container">
+            <div class="product-card" data-aos="fade-up">
+                <div class="badge-sale">Siêu RẺ!</div>
+                <div class="badge-installment">Trả góp 0%</div>
+                <div class="product-img-box">
+                    <img src="assets/img/iphone15.jpg" alt="iPhone 15">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">iPhone 15 Pro Max 256GB - Chính hãng VN/A</div>
+                    <div class="product-price">29.490.000₫</div>
+                </div>
+                <div class="promo-footer">
+                    <span class="discount-text">Mừng Tết Lớn - Giảm Đến</span>
+                    <span class="discount-val">50%++</span>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="badge-sale">Siêu RẺ!</div>
+                <div class="product-img-box">
+                    <img src="assets/img/laptop.jpg" alt="Tivi Sony">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Google Tivi Sony 4K 55 inch KD-55X75K</div>
+                    <div class="product-price">10.990.000₫</div>
+                </div>
+                <div class="promo-footer">
+                    <span class="discount-text">Khuyến Mãi Lớn - Giảm Đến</span>
+                    <span class="discount-val">50%++</span>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="badge-sale">Siêu RẺ!</div>
+                <div class="product-img-box">
+                    <img src="assets/img/maygiat.jpg" alt="Máy giặt LG">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Máy giặt LG Inverter 9 kg FV1409S2W</div>
+                    <div class="product-price">8.490.000₫</div>
+                </div>
+                <div class="promo-footer">
+                    <span class="discount-text">Quà Tặng Lớn - Giảm Đến</span>
+                    <span class="discount-val">50%++</span>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="badge-sale">Siêu RẺ!</div>
+                <div class="product-img-box">
+                    <img src="assets/img/tulanh.jpg" alt="Tủ lạnh LG">
+                </div>
+                <div class="product-info">
+                    <div class="product-name">Tủ lạnh LG Inverter 474 Lít Multi Door</div>
+                    <div class="product-price">14.990.000₫</div>
+                </div>
+                <div class="promo-footer">
+                    <span class="discount-text">Mừng Tết Lớn - Giảm Đến</span>
+                    <span class="discount-val">50%++</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 40px; color: #333;">
+        <p>&copy; 2024 TMKhangShop - Sản phẩm công nghệ chính hãng</p>
+    </footer>
+
+    <script src="assets/libs/aos.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
